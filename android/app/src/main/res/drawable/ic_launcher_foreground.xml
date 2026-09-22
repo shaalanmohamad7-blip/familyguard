@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield glyph kept within the ~66dp adaptive-icon safe zone. -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,21 L76,30 L76,52 C76,71 64,86 54,90 C44,86 32,71 32,52 L32,30 Z" />
+    <path
+        android:fillColor="#FF2F5D9F"
+        android:pathData="M49,64 L37.5,52.5 L43,47 L49,53 L65,37 L70.5,42.5 Z" />
+</vector>

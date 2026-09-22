@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- android:allowBackup is false, so this is unused at runtime; kept for API completeness
+     and to document intent if backup is ever re-enabled: never back up device credentials. -->
+<full-backup-content>
+    <exclude domain="sharedpref" path="familyguard_secure_prefs.xml" />
+    <exclude domain="sharedpref" path="familyguard_secure_prefs.xml.bak" />
+</full-backup-content>

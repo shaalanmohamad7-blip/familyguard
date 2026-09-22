@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">فاميلي غارد</string>
+
+    <!-- شاشة الإفصاح -->
+    <string name="disclosure_title">قبل أن تتابع</string>
+    <string name="disclosure_intro">فاميلي غارد تطبيق لسلامة الأسرة طلب منك أحد والديك أو ولي أمرك تثبيته. توضّح هذه الشاشة بالضبط ما يفعله التطبيق — لا يحدث شيء هنا دون أن تراه أولاً في هذه الشاشة.</string>
+    <string name="disclosure_shared_heading">ما الذي يمكن أن يشاركه فاميلي غارد، إذا فعّلته</string>
+    <string name="disclosure_shared_location">موقع جهازك، فقط أثناء تفعيل المشاركة</string>
+    <string name="disclosure_shared_usage">ملخص للتطبيقات التي تستخدمها ومدة استخدامها، فقط إذا منحت إذن الوصول إلى الاستخدام</string>
+    <string name="disclosure_shared_battery">مستوى بطارية جهازك وحالة اتصاله بالإنترنت، حتى يعرف أولياء أمرك أن التطبيق يعمل</string>
+    <string name="disclosure_with_whom_heading">من يمكنه رؤية ذلك</string>
+    <string name="disclosure_with_whom_body">فقط الوالدان أو أولياء الأمر المسجلون بالفعل في حساب أسرتك يمكنهم رؤية هذه المعلومات، من خلال لوحة التحكم الخاصة بهم. لا يمكن لأي شخص آخر الوصول إليها.</string>
+    <string name="disclosure_never_heading">ما لا يفعله فاميلي غارد أبدًا</string>
+    <string name="disclosure_never_messages">لا يقرأ رسائلك النصية أو محادثاتك في أي تطبيق أبدًا</string>
+    <string name="disclosure_never_calls">لا يسجّل مكالماتك ولا يستمع إلى الميكروفون أبدًا</string>
+    <string name="disclosure_never_keylogging">لا يسجّل ضغطات المفاتيح أو كلمات المرور أبدًا</string>
+    <string name="disclosure_never_hidden">لا يختفي أبدًا — يبقى هذا التطبيق وأيقونته وإشعاراته ظاهرة دائمًا</string>
+    <string name="disclosure_footer_note">كل إذن أدناه اختياري. إذا تخطيت أحدها، تُعرض الميزة المرتبطة به ببساطة على أنها متوقفة — ولا تُفعَّل أبدًا سرًا.</string>
+    <string name="disclosure_accept_button">فهمت، متابعة</string>
+
+    <!-- شاشة الإقران -->
+    <string name="pairing_title">إقران هذا الجهاز</string>
+    <string name="pairing_subtitle">اطلب من والدك أو ولي أمرك الرمز القصير الظاهر في لوحة تحكم فاميلي غارد الخاصة بهم، ثم أدخله أدناه.</string>
+    <string name="pairing_code_label">رمز الإقران</string>
+    <string name="pairing_code_placeholder">مثال: 7K4P9Q</string>
+    <string name="pairing_button">إقران الجهاز</string>
+    <string name="pairing_loading">جارٍ الإقران…</string>
+    <string name="pairing_error_generic">حدث خطأ ما. يرجى المحاولة مرة أخرى.</string>
+    <string name="pairing_error_blank_code">أدخل الرمز الذي أعطاك إياه والدك.</string>
+    <string name="pairing_error_bad_code">هذا الرمز لا يبدو صحيحًا. تحقق منه مرة أخرى مع والدك.</string>
+    <string name="pairing_error_expired_code">انتهت صلاحية هذا الرمز. اطلب رمزًا جديدًا من والدك.</string>
+    <string name="pairing_error_used_code">تم استخدام هذا الرمز بالفعل.</string>
+    <string name="pairing_unpaired_banner">تم إلغاء إقران هذا الجهاز من قِبل أحد الوالدين. اطلب رمزًا جديدًا لإعادة الإقران.</string>
+
+    <!-- معالج الأذونات -->
+    <string name="wizard_title">إعداد المشاركة</string>
+    <string name="wizard_step_of">الخطوة %1$d من %2$d</string>
+    <string name="wizard_foreground_location_title">شارك موقعك</string>
+    <string name="wizard_foreground_location_body">يتيح هذا لأولياء أمرك رؤية مكان جهازك عند استخدام زر الاستغاثة، أو تسجيل الوصول، أو تفعيل المشاركة المستمرة. يمكنك تخطي هذا، لكن زر الاستغاثة وتسجيل الوصول يحتاجان إليه ليعملا.</string>
+    <string name="wizard_background_location_title">مشاركة الموقع في الخلفية</string>
+    <string name="wizard_background_location_disclosure">إذا سمحت بذلك، سيشارك فاميلي غارد موقع جهازك بشكل دوري مع أولياء أمرك حتى عند إغلاق التطبيق. ستظهر لك دائمًا إشعارًا أثناء حدوث ذلك، ويمكنك إيقافه في أي وقت من الشاشة الرئيسية.</string>
+    <string name="wizard_background_location_body">في الشاشة التالية، اختر \"السماح طوال الوقت\" لتفعيل هذا، أو ارجع للإبقاء على المشاركة محدودة بالاستغاثة وتسجيل الوصول اليدوي فقط.</string>
+    <string name="wizard_notifications_title">السماح بالإشعارات</string>
+    <string name="wizard_notifications_body">يستخدم فاميلي غارد إشعارًا لإظهار وضوح تفعيل مشاركة الموقع، ولتأكيد إرسال تنبيه الاستغاثة.</string>
+    <string name="wizard_usage_access_title">الوصول إلى الاستخدام (اختياري)</string>
+    <string name="wizard_usage_access_body">يتيح الوصول إلى الاستخدام لفاميلي غارد مشاركة ملخص يومي للتطبيقات التي استخدمتها ومدتها. لا يسمح نظام أندرويد للتطبيقات بطلب هذا مباشرة — سيتم نقلك إلى شاشة إعدادات يمكنك من خلالها تفعيله لفاميلي غارد.</string>
+    <string name="wizard_usage_access_open_settings">فتح إعدادات الوصول إلى الاستخدام</string>
+    <string name="wizard_usage_access_checking">جارٍ التحقق…</string>
+    <string name="wizard_usage_access_granted">الوصول إلى الاستخدام مفعّل</string>
+    <string name="wizard_usage_access_not_granted">الوصول إلى الاستخدام غير مفعّل</string>
+    <string name="wizard_continue_button">متابعة</string>
+    <string name="wizard_skip_button">تخطي الآن</string>
+    <string name="wizard_allow_button">سماح</string>
+    <string name="wizard_finish_button">إنهاء الإعداد</string>
+    <string name="wizard_permission_granted">مسموح</string>
+    <string name="wizard_permission_denied">غير مسموح</string>
+
+    <!-- الشاشة الرئيسية للحالة -->
+    <string name="status_title">فاميلي غارد</string>
+    <string name="status_sharing_on">مشاركة الموقع: مفعّلة</string>
+    <string name="status_sharing_off">مشاركة الموقع: متوقفة</string>
+    <string name="status_explanation">أثناء تفعيل المشاركة، يمكن لأولياء أمرك رؤية موقع هذا الجهاز. ستظهر لك دائمًا إشعار المشاركة عند تفعيله، ويمكنك إيقافه في أي وقت.</string>
+    <string name="status_guardians_heading">أولياء الأمر الذين يمكنهم رؤية هذا</string>
+    <string name="status_guardians_empty">لم يتم العثور على أولياء أمر بعد.</string>
+    <string name="status_family_info_error">تعذّر تحميل بيانات أولياء أمرك الآن.</string>
+    <string name="status_permissions_heading">أذوناتك</string>
+    <string name="status_permission_foreground_location">الموقع</string>
+    <string name="status_permission_background_location">الموقع في الخلفية</string>
+    <string name="status_permission_notifications">الإشعارات</string>
+    <string name="status_permission_usage_access">الوصول إلى الاستخدام</string>
+    <string name="status_permission_granted">مسموح</string>
+    <string name="status_permission_not_granted">غير مسموح</string>
+    <string name="status_manage_permissions_button">مراجعة الأذونات</string>
+    <string name="status_sos_button">استغاثة</string>
+    <string name="status_checkin_button">شارك موقعي الآن</string>
+    <string name="status_checkin_sent">تمت مشاركة موقعك.</string>
+    <string name="status_checkin_failed">تعذّرت مشاركة موقعك. حاول مرة أخرى.</string>
+    <string name="status_unpair_button">إلغاء إقران هذا الجهاز</string>
+    <string name="status_unpair_confirm_title">إلغاء إقران هذا الجهاز؟</string>
+    <string name="status_unpair_confirm_body">سيؤدي هذا إلى إيقاف جميع مشاركات الموقع والحالة فورًا، وإزالة هذا الجهاز من حساب أسرتك. ستحتاج إلى رمز جديد من والدك لإعادة الإقران.</string>
+    <string name="status_unpair_confirm_confirm">إلغاء الإقران</string>
+    <string name="status_unpair_confirm_cancel">إلغاء</string>
+    <string name="status_loading_family_info">جارٍ تحميل بيانات أولياء أمرك…</string>
+
+    <!-- ورقة تأكيد الاستغاثة -->
+    <string name="sos_sheet_title">إرسال تنبيه استغاثة؟</string>
+    <string name="sos_sheet_body">سيؤدي هذا إلى إرسال موقعك الحالي الدقيق فورًا إلى أولياء أمرك، مع تنبيه طارئ.</string>
+    <string name="sos_sheet_note_label">أضف ملاحظة (اختياري)</string>
+    <string name="sos_sheet_confirm">إرسال الاستغاثة</string>
+    <string name="sos_sheet_cancel">إلغاء</string>
+    <string name="sos_sending">جارٍ إرسال الاستغاثة…</string>
+    <string name="sos_sent_success">تم إرسال الاستغاثة إلى أولياء أمرك.</string>
+    <string name="sos_sent_failure">تعذّر إرسال الاستغاثة. حاول مرة أخرى أو اطلب المساعدة مباشرة.</string>
+    <string name="sos_no_location">تعذّر الحصول على موقعك. حاول مرة أخرى.</string>
+
+    <!-- الإشعارات -->
+    <string name="notif_channel_location_sharing_name">مشاركة الموقع</string>
+    <string name="notif_channel_location_sharing_desc">يظهر أثناء مشاركة فاميلي غارد لموقع هذا الجهاز بنشاط</string>
+    <string name="notif_channel_alerts_name">تنبيهات فاميلي غارد</string>
+    <string name="notif_channel_alerts_desc">تنبيهات مهمة، مثل تأكيدات الاستغاثة وتغييرات الإقران</string>
+    <string name="notif_sharing_title">فاميلي غارد يشارك موقعك</string>
+    <string name="notif_sharing_text">يمكن لأولياء أمرك رؤية موقع هذا الجهاز. اضغط للمراجعة أو الإيقاف.</string>
+    <string name="notif_unpaired_title">تم إلغاء إقران الجهاز</string>
+    <string name="notif_unpaired_text">تم إلغاء إقران هذا الجهاز من قِبل أحد الوالدين. افتح فاميلي غارد لإعادة الإقران.</string>
+
+    <!-- عام -->
+    <string name="common_retry">إعادة المحاولة</string>
+    <string name="common_cancel">إلغاء</string>
+    <string name="common_ok">حسنًا</string>
+    <string name="common_error_network">تعذّر الوصول إلى الخادم. تحقق من اتصالك وحاول مرة أخرى.</string>
+</resources>

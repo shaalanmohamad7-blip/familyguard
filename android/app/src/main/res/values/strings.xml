@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FamilyGuard</string>
+
+    <!-- Disclosure screen -->
+    <string name="disclosure_title">Before you continue</string>
+    <string name="disclosure_intro">FamilyGuard is a family-safety app your parent or guardian asked you to install. This screen explains exactly what it does — nothing here happens without you seeing it here first.</string>
+    <string name="disclosure_shared_heading">What FamilyGuard can share, if you turn it on</string>
+    <string name="disclosure_shared_location">Your device\'s location, only while sharing is switched on</string>
+    <string name="disclosure_shared_usage">A summary of which apps you use and for how long, only if you grant Usage Access</string>
+    <string name="disclosure_shared_battery">Your battery level and whether your device is online, so your guardians know the app is working</string>
+    <string name="disclosure_with_whom_heading">Who can see it</string>
+    <string name="disclosure_with_whom_body">Only the parents or guardians already on your family account can see this information, through their own private dashboard. No one else has access.</string>
+    <string name="disclosure_never_heading">What FamilyGuard never does</string>
+    <string name="disclosure_never_messages">Never reads your texts, chats, or messages in any app</string>
+    <string name="disclosure_never_calls">Never records your calls or listens to your microphone</string>
+    <string name="disclosure_never_keylogging">Never logs your keystrokes or passwords</string>
+    <string name="disclosure_never_hidden">Never hides itself — this app, its icon, and its notifications always stay visible</string>
+    <string name="disclosure_footer_note">Every permission below is optional. If you skip one, the feature it powers is simply shown as off — never turned on secretly.</string>
+    <string name="disclosure_accept_button">I understand, continue</string>
+
+    <!-- Pairing screen -->
+    <string name="pairing_title">Pair this device</string>
+    <string name="pairing_subtitle">Ask your parent or guardian for the short code shown on their FamilyGuard dashboard, then enter it below.</string>
+    <string name="pairing_code_label">Pairing code</string>
+    <string name="pairing_code_placeholder">e.g. 7K4P9Q</string>
+    <string name="pairing_button">Pair device</string>
+    <string name="pairing_loading">Pairing…</string>
+    <string name="pairing_error_generic">Something went wrong. Please try again.</string>
+    <string name="pairing_error_blank_code">Enter the code your parent gave you.</string>
+    <string name="pairing_error_bad_code">That code doesn\'t look right. Double-check it with your parent.</string>
+    <string name="pairing_error_expired_code">That code has expired. Ask your parent for a new one.</string>
+    <string name="pairing_error_used_code">This code has already been used.</string>
+    <string name="pairing_unpaired_banner">This device was unpaired by a parent. Ask them for a new code to pair again.</string>
+
+    <!-- Permission wizard -->
+    <string name="wizard_title">Set up sharing</string>
+    <string name="wizard_step_of">Step %1$d of %2$d</string>
+    <string name="wizard_foreground_location_title">Share your location</string>
+    <string name="wizard_foreground_location_body">This lets your guardians see where your device is when you use the SOS button, check in, or turn on continuous sharing. You can skip this, but SOS and check-in need it to work.</string>
+    <string name="wizard_background_location_title">Share location in the background</string>
+    <string name="wizard_background_location_disclosure">If you allow this, FamilyGuard will periodically share your device\'s location with your guardians even while the app is closed. You\'ll always see a notification while this is happening, and you can turn it off at any time from the home screen.</string>
+    <string name="wizard_background_location_body">On the next screen, choose \"Allow all the time\" to turn this on, or go back to keep sharing limited to SOS and manual check-ins only.</string>
+    <string name="wizard_notifications_title">Allow notifications</string>
+    <string name="wizard_notifications_body">FamilyGuard uses a notification to clearly show when location sharing is active, and to confirm when an SOS alert is sent.</string>
+    <string name="wizard_usage_access_title">Usage Access (optional)</string>
+    <string name="wizard_usage_access_body">Usage Access lets FamilyGuard share a daily summary of which apps you used and for how long. Android doesn\'t allow apps to ask for this directly — you\'ll be taken to a Settings screen where you can turn it on for FamilyGuard.</string>
+    <string name="wizard_usage_access_open_settings">Open Usage Access settings</string>
+    <string name="wizard_usage_access_checking">Checking…</string>
+    <string name="wizard_usage_access_granted">Usage Access is on</string>
+    <string name="wizard_usage_access_not_granted">Usage Access is off</string>
+    <string name="wizard_continue_button">Continue</string>
+    <string name="wizard_skip_button">Skip for now</string>
+    <string name="wizard_allow_button">Allow</string>
+    <string name="wizard_finish_button">Finish setup</string>
+    <string name="wizard_permission_granted">Allowed</string>
+    <string name="wizard_permission_denied">Not allowed</string>
+
+    <!-- Status home screen -->
+    <string name="status_title">FamilyGuard</string>
+    <string name="status_sharing_on">Location sharing is ON</string>
+    <string name="status_sharing_off">Location sharing is OFF</string>
+    <string name="status_explanation">While sharing is on, your guardians can see this device\'s location. You\'ll always see the sharing notification when it\'s active, and you can stop it at any time.</string>
+    <string name="status_guardians_heading">Guardians who can see this</string>
+    <string name="status_guardians_empty">No guardians found yet.</string>
+    <string name="status_family_info_error">Couldn\'t load your guardians right now.</string>
+    <string name="status_permissions_heading">Your permissions</string>
+    <string name="status_permission_foreground_location">Location</string>
+    <string name="status_permission_background_location">Background location</string>
+    <string name="status_permission_notifications">Notifications</string>
+    <string name="status_permission_usage_access">Usage Access</string>
+    <string name="status_permission_granted">Allowed</string>
+    <string name="status_permission_not_granted">Not allowed</string>
+    <string name="status_manage_permissions_button">Review permissions</string>
+    <string name="status_sos_button">SOS</string>
+    <string name="status_checkin_button">Share my location now</string>
+    <string name="status_checkin_sent">Your location was shared.</string>
+    <string name="status_checkin_failed">Couldn\'t share your location. Try again.</string>
+    <string name="status_unpair_button">Unpair this device</string>
+    <string name="status_unpair_confirm_title">Unpair this device?</string>
+    <string name="status_unpair_confirm_body">This immediately stops all location and status sharing, and removes this device from your family account. You\'ll need a new code from your parent to pair again.</string>
+    <string name="status_unpair_confirm_confirm">Unpair</string>
+    <string name="status_unpair_confirm_cancel">Cancel</string>
+    <string name="status_loading_family_info">Loading your guardians…</string>
+
+    <!-- SOS confirmation sheet -->
+    <string name="sos_sheet_title">Send an SOS alert?</string>
+    <string name="sos_sheet_body">This immediately sends your guardians your exact current location, along with an emergency alert.</string>
+    <string name="sos_sheet_note_label">Add a note (optional)</string>
+    <string name="sos_sheet_confirm">Send SOS</string>
+    <string name="sos_sheet_cancel">Cancel</string>
+    <string name="sos_sending">Sending SOS…</string>
+    <string name="sos_sent_success">SOS sent to your guardians.</string>
+    <string name="sos_sent_failure">Couldn\'t send SOS. Try again or call for help directly.</string>
+    <string name="sos_no_location">Couldn\'t get your location. Try again.</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_location_sharing_name">Location sharing</string>
+    <string name="notif_channel_location_sharing_desc">Shows while FamilyGuard is actively sharing this device\'s location</string>
+    <string name="notif_channel_alerts_name">FamilyGuard alerts</string>
+    <string name="notif_channel_alerts_desc">Important alerts, such as SOS confirmations and pairing changes</string>
+    <string name="notif_sharing_title">FamilyGuard is sharing your location</string>
+    <string name="notif_sharing_text">Your guardians can see this device\'s location. Tap to review or turn this off.</string>
+    <string name="notif_unpaired_title">Device unpaired</string>
+    <string name="notif_unpaired_text">This device was unpaired by a parent. Open FamilyGuard to pair again.</string>
+
+    <!-- Common -->
+    <string name="common_retry">Retry</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_ok">OK</string>
+    <string name="common_error_network">Couldn\'t reach the server. Check your connection and try again.</string>
+</resources>

@@ -1,0 +1,142 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String         @id @default(cuid())
+  email        String         @unique
+  passwordHash String
+  name         String
+  createdAt    DateTime       @default(now())
+  memberships  FamilyMember[]
+}
+
+model Family {
+  id            String         @id @default(cuid())
+  name          String
+  isDemo        Boolean        @default(false)
+  retentionDays Int            @default(30)
+  createdAt     DateTime       @default(now())
+  members       FamilyMember[]
+  devices       Device[]
+  geofences     Geofence[]
+  alerts        Alert[]
+  pairingCodes  PairingCode[]
+  accessLogs    AccessLog[]
+}
+
+model FamilyMember {
+  id       String @id @default(cuid())
+  userId   String
+  familyId String
+  role     Role   @default(PARENT)
+  user     User   @relation(fields: [userId], references: [id])
+  family   Family @relation(fields: [familyId], references: [id])
+  @@unique([userId, familyId])
+}
+enum Role { PARENT GUARDIAN }
+
+model Device {
+  id          String   @id @default(cuid())
+  familyId    String
+  label       String
+  platform    String   @default("ANDROID")
+  status      String   @default("ACTIVE") // ACTIVE | OFFLINE | REVOKED
+  pairedAt    DateTime @default(now())
+  lastSeenAt  DateTime?
+  batteryPct  Int?
+  appVersion  String?
+  permissions Json     @default("{}") // { locationFg, locationBg, usageAccess, notifications }
+  fcmToken    String?
+  family      Family   @relation(fields: [familyId], references: [id])
+  locations   LocationPoint[]
+  usage       UsageRecord[]
+  limitRule   LimitRule?
+}
+
+model PairingCode {
+  id            String    @id @default(cuid())
+  code          String    @unique
+  familyId      String
+  deviceLabel   String
+  createdAt     DateTime  @default(now())
+  expiresAt     DateTime
+  redeemedAt    DateTime?
+  redeemedDeviceId String?
+  family        Family    @relation(fields: [familyId], references: [id])
+}
+
+model LocationPoint {
+  id         String   @id @default(cuid())
+  deviceId   String
+  lat        Float
+  lng        Float
+  accuracyM  Float
+  capturedAt DateTime
+  source     String   // BACKGROUND | CHECK_IN | SOS
+  device     Device   @relation(fields: [deviceId], references: [id])
+  @@index([deviceId, capturedAt])
+}
+
+model Geofence {
+  id               String  @id @default(cuid())
+  familyId         String
+  name             String
+  lat              Float
+  lng              Float
+  radiusM          Int
+  alertOnArrival   Boolean @default(true)
+  alertOnDeparture Boolean @default(true)
+  family           Family  @relation(fields: [familyId], references: [id])
+}
+
+model UsageRecord {
+  id         String   @id @default(cuid())
+  deviceId   String
+  date       DateTime
+  appPackage String
+  appLabel   String
+  minutes    Int
+  device     Device   @relation(fields: [deviceId], references: [id])
+  @@index([deviceId, date])
+}
+
+model LimitRule {
+  id                String  @id @default(cuid())
+  deviceId          String  @unique
+  dailyLimitMinutes Int?
+  windowStart       String?
+  windowEnd         String?
+  daysOfWeek        Json    @default("[]")
+  bedtimeStart      String?
+  bedtimeEnd        String?
+  device            Device  @relation(fields: [deviceId], references: [id])
+}
+
+model Alert {
+  id             String    @id @default(cuid())
+  familyId       String
+  deviceId       String?
+  type           String    // SOS | GEOFENCE_ARRIVAL | GEOFENCE_DEPARTURE | LOW_BATTERY | OFFLINE | PERMISSION_REVOKED
+  payload        Json      @default("{}")
+  createdAt      DateTime  @default(now())
+  acknowledgedAt DateTime?
+  family         Family    @relation(fields: [familyId], references: [id])
+}
+
+model AccessLog {
+  id         String   @id @default(cuid())
+  familyId   String
+  actorType  String   // USER | DEVICE
+  actorId    String
+  action     String
+  targetType String?
+  targetId   String?
+  createdAt  DateTime @default(now())
+  family     Family   @relation(fields: [familyId], references: [id])
+}

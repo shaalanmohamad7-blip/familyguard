@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { logAccess } from "@/lib/accessLog";
+import { isAdminEmail } from "@/lib/admin";
 
 export const dynamic = "force-dynamic";
 
@@ -30,9 +31,13 @@ export async function POST(req: Request) {
 
   const passwordHash = await bcrypt.hash(password, 10);
 
+  // The platform owner (ADMIN_EMAIL) is auto-activated; everyone else waits
+  // for the owner to approve them from the admin panel.
+  const status = isAdminEmail(normalizedEmail) ? "ACTIVE" : "PENDING";
+
   const result = await prisma.$transaction(async (tx) => {
     const user = await tx.user.create({
-      data: { email: normalizedEmail, passwordHash, name },
+      data: { email: normalizedEmail, passwordHash, name, status },
     });
     const family = await tx.family.create({
       data: { name: familyName, isDemo: false },
@@ -52,5 +57,8 @@ export async function POST(req: Request) {
     targetId: result.family.id,
   });
 
-  return NextResponse.json({ id: result.user.id }, { status: 201 });
+  return NextResponse.json(
+    { id: result.user.id, status },
+    { status: 201 }
+  );
 }

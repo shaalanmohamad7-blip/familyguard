@@ -12,6 +12,7 @@ model User {
   email        String         @unique
   passwordHash String
   name         String
+  status       String         @default("PENDING") // PENDING | ACTIVE | REJECTED
   createdAt    DateTime       @default(now())
   memberships  FamilyMember[]
 }
